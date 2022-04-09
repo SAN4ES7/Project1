@@ -1,0 +1,117 @@
+@import 'reset';
+
+@mixin fontset($fs, $lh, $c) {
+    font-size: $fs;
+    line-height: $lh;
+    color: $c;
+}
+
+* {
+    box-sizing: border-box;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+%btn {
+    @include fontset(14px, 18px, #fff);
+    letter-spacing: 2px;
+    padding: 11px 25px;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color: #222;
+    text-transform: uppercase;
+}
+
+%font-sixteen {
+    @include fontset(16px, 24px, #222)
+}
+
+.container {
+    max-width: 1190px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.fontstyle {
+    font-size: $fs;
+    line-height: $lh;
+    color: $c;
+}
+
+.logo {
+    margin-left: 16px;
+}
+
+.menu {
+    margin-left: auto;
+}
+
+.menu__list {
+    display: flex;
+}
+
+.menu__list-item+.menu__list-item {
+    margin-left: 32px;
+}
+
+.menu__list-link {
+    @include fontset(14px, 24px, #666);
+}
+
+.template-btn {
+    margin: 0 9px 0 32px;
+    @extend %btn;
+}
+
+.top__wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.top-info {
+    max-width: 383px;
+    margin-left: 78px;
+    margin-top: 145px;
+    margin-bottom: 155px;
+
+.logo {
+        margin-left: 0;
+        margin-bottom: 11px;
+    }
+
+.title {
+        @include fontset(54px, 59.4px, #222);
+        margin-bottom: 18px;
+    }
+
+.subtitle {
+        @extend %font-sixteen;
+        margin-bottom: 20px;
+    }
+
+.user-btns {
+        .download-btn {
+            @extend %btn;
+            margin-left: 5px;
+            margin-right: 10px;
+        }
+
+.moreinfo-btn {
+            @extend %btn;
+        }
+    }
+}
+
+.phone {
+    height: 548px;
+    margin-left: 230px;
+    margin-top: 100px;
+}
